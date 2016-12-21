@@ -1,0 +1,8 @@
+bib/*
+!main.bib
+build/
+tex/*
+!tex/bibliography.tex
+!tex/layout.tex
+!tex/preamble.tex
+!tex/title.tex
