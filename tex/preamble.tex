@@ -1,5 +1,8 @@
 \usepackage{hyperref}
 % Define footnote color option.
+\ifx\mycounter\undefined
+  \newcounter{Hfootnote}
+\fi
 \makeatletter
 \def\@footnotecolor{red}
 \define@key{Hyp}{footnotecolor}{%
