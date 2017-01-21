@@ -1,4 +1,3 @@
-\usepackage{hyperref}
 % Define footnote color option.
 \ifx\mycounter\undefined
   \newcounter{Hfootnote}
@@ -23,7 +22,6 @@
   \relax
 }%
 \makeatother
-\hypersetup{colorlinks=true,footnotecolor=blue}
 
 \usepackage{amsmath}
 
@@ -38,6 +36,9 @@
 \newcommand{\ie}{\textit{i.\hairsp{}e.}\xspace}
 % Command to print e.g.
 \newcommand{\eg}{\textit{e.\hairsp{}g.}\xspace}
+
+% New command for note.
+\newcommand{\note}[1]{\footnote{\hlred{NOTE}: #1}}
 
 % Set up the images/graphics package
 \usepackage{graphicx}
@@ -63,3 +64,23 @@
 
 % Small sections of multiple columns
 \usepackage{multicol}
+
+% Definition environment.
+\usepackage{amsthm}
+\usepackage{thmtools}
+%\theoremstyle{definition}
+\declaretheorem[style=remark]{remark}
+\newtheorem{definition}{Definition}
+\declaretheorem[style=remark]{example}
+
+\usepackage{hyperref}
+\hypersetup{
+  pdftex,
+  bookmarksnumbered=true,
+  bookmarksopen=true,
+  bookmarksopenlevel=1,
+  colorlinks=true,
+  footnotecolor=blue,
+  pdfstartview=Fit,
+  pdfpagemode=UseOutlines
+}
